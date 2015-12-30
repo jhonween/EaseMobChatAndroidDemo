@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.easemob.chatuidemo" >
+    package="com.easemob.chat.uidemo" >
 
 
 
@@ -35,7 +35,7 @@
     
     
     <application
-        android:name="DemoApplication"
+        android:name="com.easemob.chatuidemo.DemoApplication"
         android:allowBackup="true"
         android:icon="@drawable/em_logo_uidemo"
         android:label="@string/app_name" >
@@ -82,14 +82,7 @@
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustResize" >
         </activity>
-        <!-- 聊天页面 -->
-        <activity
-            android:name="com.easemob.applib.ui.ChatActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/horizontal_slide"
-            android:windowSoftInputMode="adjustResize" >
-        </activity>
+
         <!-- 添加好友 -->
         <activity
             android:name="com.easemob.chatuidemo.ui.AddContactActivity"
@@ -282,13 +275,13 @@
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="stateAlwaysHidden"
-            ></activity>
+            />
         <!-- user profile -->
 		<activity 
 		    android:name="com.easemob.chatuidemo.ui.UserProfileActivity"
 		    android:screenOrientation="portrait"
 		    android:theme="@style/horizontal_slide"
-		    ></activity>
+		    />
 
         <!-- 开机自启动服务 -->
         <receiver android:name="com.easemob.chat.StartServiceReceiver" >
@@ -352,11 +345,7 @@
             android:name="com.baidu.location.f" 
             android:enabled="true"
             android:process=":remote" />
-        <!-- umeng appkey，可忽略 -->
-        <meta-data
-            android:name="UMENG_APPKEY"
-            android:value="53912a3156240b01a7075ed1" >
-        </meta-data>
+
         <meta-data android:value="easemob" android:name="UMENG_CHANNEL"/>
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
