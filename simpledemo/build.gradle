@@ -2,8 +2,8 @@ apply plugin: 'com.android.application'
 
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
 
     sourceSets {
         main {
@@ -16,6 +16,16 @@ android {
             assets.srcDirs = ['assets']
         }
 
+    }
+
+    defaultConfig {
+        applicationId "com.easemob.chat.uidemo"
+        minSdkVersion 9
+        targetSdkVersion 22
+        versionCode 10010
+        versionName "1.0.1"
+        archivesBaseName = "chat-demo-$versionName"
+        //setProperty("archivesBaseName", "MyCompany-MyAppName-$versionName")
     }
 
     dependencies {
