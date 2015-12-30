@@ -1,1 +1,1 @@
-include ':simpledemo', ':easechat'
+include ':examplechat', ':easechat', ':easeui'

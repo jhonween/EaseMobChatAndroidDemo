@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="ChatDemoUI" default="help">
+<project name="easeui" default="help">
 
     <!-- The local.properties file is created and updated by the 'android' tool.
          It contains the path to the SDK. It should *NOT* be checked into
          Version Control Systems. -->
     <property file="local.properties" />
-    <property name="out.final.file" value="chatdemo-ui.apk"/>
 
     <!-- The ant.properties file can be created by you. It is only edited by the
          'android' tool to add properties to it.
@@ -89,9 +88,19 @@
     -->
     <!-- version-tag: 1 -->
     <import file="${sdk.dir}/tools/ant/build.xml" />
-	<target name="proguard-jar">
+
+    <!--
+    <target name="proguard-jar">
         <java jar="${sdk.dir}/tools/proguard/lib/proguard.jar" fork="true">
             <arg value="@proguard-project.txt"/>
         </java>
     </target>
+
+    <property name="easemob.chat.version" value="2.2.3"/>
+    <target name="-post-build" depends="proguard-jar">
+        <echo>build the sdk jar</echo>
+        <copy file="${out.dir}/classes-proguard.jar" tofile="${out.dir}/easemobchat_${easemob.chat.version}.jar"/>
+    </target>
+    -->
+
 </project>
